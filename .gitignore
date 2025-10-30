@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.dvi
+*.nav
+*.snm
+*.vrb
+*.log
+*.thm
+texput.log
+
+# Keep PDFs tracked if desired (not ignored)
+# *.pdf

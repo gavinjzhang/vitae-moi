@@ -1,0 +1,118 @@
+\documentclass[10pt,letterpaper]{article}
+
+% Encoding and fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+% Slightly tighten global line spacing
+\linespread{0.95}
+
+% Layout and typography
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{parskip} % no paragraph indent, add vertical space
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,topsep=0pt,leftmargin=*,itemsep=0.1em}
+% Section styling: simple bold headings (no boxes)
+% Use titlesec if available to tweak spacing, otherwise fall back to defaults
+\IfFileExists{titlesec.sty}{%
+  \usepackage{titlesec}
+  \titleformat{\section}[block]{\large\bfseries}{}{0pt}{#1}
+  \titlespacing*{\section}{0pt}{0.8em}{0.5em}
+}{}
+
+% Links
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% ---- Personal info (edit these) ----
+\newcommand{\name}{Jiayu (Gavin) Zhang}
+\newcommand{\emailaddr}{jiayu@zhangdata.com}
+\newcommand{\phone}{}
+\newcommand{\location}{}
+\newcommand{\linkedin}{https://www.linkedin.com/in/jiayu-g-zhang}
+\newcommand{\website}{https://www.zhangdata.com}
+% ------------------------------------
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\LARGE\bfseries \name}\\[2pt]
+  \href{mailto:\emailaddr}{\emailaddr} • \href{\linkedin}{LinkedIn} • \href{\website}{Website}
+\end{center}
+
+% Summary (optional)
+% \section*{Summary}
+% One or two concise sentences about your focus and strengths.
+
+\section*{Experience}
+
+\textbf{Senior AI Analyst (Finance)} — Ignite Tech \hfill Jun 25--Ongoing\\
+\begin{itemize}
+  \item Implemented scalable workflows in Zapier, n8n, and Python across operations, reducing costs and improving EBITDA margin by 20%.
+  \item Managed revenue operations and post-acquisition integration, setting up BigQuery \& Dataform reporting that reduced revenue slippage by 85%.
+  \item Championed AI tool adoption across teams, saving 2+ hours per person weekly.
+  \item Reported to the CFO on efficiency, ROI, and AI initiative adoption; owned traditional financial reporting.
+\end{itemize}
+
+\textbf{Senior Consultant (Deals)} — PricewaterhouseCoopers \hfill Nov 21--Jun 25\\
+\begin{itemize}
+  \item Built FastAPI backends for financial data processing with validation, improving retrieval speed by 40% and achieving 99.9% data accuracy.
+  \item Engineered scalable, parallelized data pipelines applicable to customer data integration workflows.
+  \item Led data-driven analyses across manufacturing, SaaS, and pharma for deals totaling \$1B+.
+  \item Enhanced due diligence with AI document processing and natural language data query.
+  \item Translated complex business requirements into technical solutions for cross-functional stakeholders with consistently strong client feedback.
+\end{itemize}
+
+\textbf{Supply Chain Data Analyst} — 3Fold Resources \hfill Aug 20--Nov 21\\
+\begin{itemize}
+  \item Designed Python-based pipelines to automate procurement workflows, reducing manual work by 3+ hours weekly.
+  \item Built analytics to optimize supplier selection, cutting costs by 75% for key components.
+\end{itemize}
+
+\section*{Education}
+
+\textbf{Bachelor of Commerce (Actuarial Science)}, University of Melbourne \hfill Jun 19--Dec 21\\
+Global Scholars Award; H1 Honours
+
+\textbf{Student Exchange Programme (Quantitative Finance)}, National University of Singapore \hfill Dec 21--Jun 21\\
+Honours
+
+\section*{Skills}
+
+\textbf{Programming:} SQL, Python, Typescript, R, Haskell\\
+\textbf{Data:} ETL \& ELT, Data Warehousing, Airflow, Jupyter\\
+\textbf{Databases:} PostgreSQL, Snowflake, RDS, BigQuery\\
+\textbf{BI/Analytics:} PowerBI/DAX, Tableau, Looker\\
+\textbf{Backend/Infra:} FastAPI, Docker, Kubernetes, Serverless Functions, Git\\
+\textbf{AI/LLM:} LangChain Suite, Vertex, Vector DBs, RAG, OpenAI, Bedrock, MCP\\
+\textbf{Languages:} English; Mandarin; Spanish (Professional)
+
+\section*{Projects}
+
+\textbf{Financial Dashboarding} — Real-time reporting \hfill \\
+\emph{Tech:} Python, Snowflake\\
+\begin{itemize}
+  \item Built interactive dashboards with a Python backend connected to Snowflake, enabling real-time financial reporting and KPI visualization.
+\end{itemize}
+
+\textbf{Automated Invoice Processing (AIP)} — OCR + LLM extraction \hfill \\
+\emph{Tech:} OCR, LLMs, PostgreSQL (vector)\\
+\begin{itemize}
+  \item Developed end-to-end invoice processing with OCR, document parsing, and LLM-based extraction; used a PostgreSQL vector database for semantic search.
+\end{itemize}
+
+\textbf{Algorithmic Market Maker} — Low-latency trading system \hfill \\
+\emph{Tech:} Python, AsyncIO, WebSockets\\
+\begin{itemize}
+  \item Built a high-frequency trading system consuming real-time market data over WebSockets with an asynchronous, low-latency architecture.
+\end{itemize}
+
+% \section*{Publications}
+% Author, \emph{Title}, Venue, Year. DOI/URL.
+
+\end{document}
