@@ -19,7 +19,7 @@
 % Section styling: simple bold headings (no boxes)
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{\z@}%
-  {-1.5ex \@plus -1ex \@minus -.2ex}%
+  {-0.86ex \@plus -0.58ex \@minus -.14ex}%
   {0.8ex \@plus.2ex}%
   {\normalfont\large\bfseries}}
 \makeatother
@@ -40,70 +40,78 @@
 \begin{document}
 
 % Header
-\begin{center}
-  {\LARGE\bfseries \name} \href{mailto:\emailaddr}{\emailaddr} • \href{\linkedin}{linkedin.com/in/jiayu-g-zhang} • \href{\website}{www.zhangdata.com}
-\end{center}
+{\LARGE\bfseries \name} \, \href{mailto:\emailaddr}{\emailaddr} • \href{\linkedin}{linkedin.com/in/jiayu-g-zhang} • \href{\website}{www.zhangdata.com}
 
-\section*{Technical Skills}
-\hrule\vspace{0.3em}
-SQL, Python, Typescript, R, Haskell, ETL \& ELT, Data Warehousing, Airflow, Serverless Functions, Jupyter\\
-PostgreSQL, Snowflake, RDS, BigQuery, PowerBI/DAX, Tableau, Looker, FastAPI, Docker, Kubernetes, Git\\
-LangChain Suite, Vertex, Vector DBs, RAG, OpenAI, Bedrock, MCP, English, Mandarin, Spanish (Professional)
+\section*{Technical Skills\strut}
+\hrule\vspace{0.2em}
+LangChain Suite, Vertex, Vector DBs, RAG, OpenAI, Bedrock, MCP, Python, R, SQL, Typescript, Haskell\\
+ETL \& ELT, Data Warehousing, Airflow, PostgreSQL, Snowflake, RDS, BigQuery, FastAPI, Docker, Kubernetes\\
+PowerBI/DAX, Tableau, Looker, Serverless Functions, Jupyter, Git, English, Mandarin, Spanish (Professional)
 
-\section*{Professional Experience}
-\hrule\vspace{0.3em}
+\section*{Professional Experience\strut}
+\hrule\vspace{0.2em}
 
-\textbf{Ignite Tech} — Senior AI Analyst (Finance) \hfill \textit{Jun 25--Ongoing}\vspace{-0.2em}
+{\bfseries IgniteTech} — Senior AI Analyst (Finance) \hfill \textit{Jun 25--Ongoing}\vspace{-0.2em}
 \begin{itemize}
-  \item Drove the implementation of scalable workflows with and without AI in Zapier, n8n and Python across the entire business operations arm to reduce operational costs, improving EBITDA margin by 20% and improving experience for both customers and vendors.
-  \item Managed revenue operations across the group and integrated a recent acquisition into the portfolio; set up reporting and centralised analytics in BigQuery \& Dataform for data-driven decision making that reduced revenue slippage by 85%.
+  \item Drove the implementation of scalable workflows with and without AI in Zapier, n8n and Python across the entire business operations arm to reduce operational costs, improving EBITDA margin by 20\% and improving experience for both customers and vendors.
+  \item Managed revenue operations across the group and integrated a recent acquisition into the portfolio; set up reporting and centralised analytics in BigQuery \& Dataform for data-driven decision making that reduced revenue slippage by 85\%.
   \item Championed the integration of new AI tools and systems to improve operational efficiency and save more than 2 hours per person weekly.
   \item Reported directly to the CFO on efficiency, ROI and adoption of new and existing AI initiatives, in addition to traditional financial reporting.
 \end{itemize}
 
-\textbf{PricewaterhouseCoopers} — Senior Consultant (Deals) \hfill \textit{Nov 21--Jun 25}\vspace{-0.2em}
+{\bfseries PricewaterhouseCoopers} — Senior Consultant (Deals) \hfill \textit{Nov 21--Jun 25}\vspace{-0.2em}
 \begin{itemize}
-  \item Developed FastAPI backend systems for financial data processing with built-in validation checks, improving data retrieval speed by 40% and ensuring 99.9% data accuracy for critical business decisions.
+  \item Developed FastAPI backend systems for financial data processing with built-in validation checks, improving data retrieval speed by 40\% and ensuring 99.9\% data accuracy for critical business decisions.
   \item Engineered scalable and parallelised data processing pipelines directly applicable to customer data integration workflows.
   \item Performed deep, data-driven analyses of company financials and operations across manufacturing, SaaS, and pharmaceuticals for deals of over \$1 billion in aggregate.
   \item Enhanced the accuracy and depth of analysis for the broader deals team by implementing AI document processing and natural language data query.
   \item Worked extensively with technical and non-technical stakeholders, translating complex business requirements into technical solutions for M\&A due diligence with consistently strong client feedback.
 \end{itemize}
 
-\textbf{3Fold Resources} — Supply Chain Data Analyst \hfill \textit{Aug 20--Nov 21}\vspace{-0.2em}
+{\bfseries 3Fold Resources} — Supply Chain Data Analyst \hfill \textit{Aug 20--Nov 21}\vspace{-0.2em}
 \begin{itemize}
   \item Designed and implemented Python-based data processing pipelines to automate procurement workflows, reducing manual work by 3+ hours weekly.
   \item Developed analytics tools to optimize supplier selection, resulting in 75\% cost reduction for key components.
 \end{itemize}
 
-\section*{Education}
-\hrule\vspace{0.3em}
+\section*{Education\strut}
+\hrule\vspace{0.2em}
 
-\textbf{University of Melbourne} — Bachelor of Commerce (Actuarial Science) \hfill \textit{Jun 19--Dec 21}\\
+{\bfseries University of Melbourne} — Bachelor of Commerce (Actuarial Science) \hfill \textit{Jun 19--Dec 21}\\
 Global Scholars Award; H1 Honours
 
-\textbf{National University of Singapore} — Student Exchange Programme (Quantitative Finance) \hfill \textit{Dec 21--Jun 21}\\
-Honours
+{\bfseries National University of Singapore} — Student Exchange Programme (Data Science) \hfill \textit{Dec 21--Jun 22}\\
+Honours level Data Science
 
-\section*{Projects}
-\hrule\vspace{0.3em}
+\section*{Projects\strut}
+\hrule\vspace{0.2em}
 
-\textbf{AIP: Automated Invoice Processing} — End-to-end document processing system \hfill \\
+{\bfseries AIP: Automated Invoice Processing} — End-to-end document processing system \hfill \\
 \emph{Tech:} OCR, LLM, PostgreSQL Vector DB\vspace{-0.2em}
 \begin{itemize}
   \item Developed end-to-end Automated Invoice Processing System with OCR, document parsing, and LLM-based extraction, utilizing PostgreSQL vector database for semantic search.
 \end{itemize}
 
-\textbf{Algorithmic Market Maker} — High-frequency trading system \hfill \\
+{\bfseries Algorithmic Market Maker} — High-frequency trading system \hfill \\
 \emph{Tech:} Python, WebSockets, Async Architecture\vspace{-0.2em}
 \begin{itemize}
   \item Developed a high-frequency trading system using Python with websocket connections for real-time market data processing with low latency operation with asynchronous architecture.
 \end{itemize}
 
-\textbf{Financial Dashboarding} — Interactive dashboards with Python backend \hfill \\
+{\bfseries Financial Dashboarding} — Interactive dashboards with Python backend \hfill \\
 \emph{Tech:} Python, Snowflake\vspace{-0.2em}
 \begin{itemize}
   \item Built interactive financial dashboards with a Python backend connected to Snowflake, enabling real-time financial reporting and KPI visualization.
+\end{itemize}
+
+\section*{Mentorship\strut}
+\hrule\vspace{0.2em}
+
+{\bfseries Romitan City Government, Uzbekistan} — ML/AI Development Mentor \hfill \textit{2025}\vspace{-0.2em}
+\begin{itemize}
+  \item Mentored ML/AI developers in application architecture and best practices for government infrastructure constraints
+  \item Enhanced team capabilities in machine learning implementation and scalable system design
+  \item Facilitated knowledge transfer sessions on modern development workflows and deployment strategies
 \end{itemize}
 
 \end{document}
