@@ -25,6 +25,7 @@
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
 
+
 % Remove page numbers
 \pagenumbering{gobble}
 
@@ -72,23 +73,45 @@ Score: 43/45; Proxime Accessit (Second in Class), Higher Level Mathematics and P
 
 \section*{Projects}
 
-\textbf{Financial Dashboarding} — Real-time reporting \hfill \\
-\emph{Tech:} Python, Snowflake\\[-1.5em]
+\begin{samepage}
+\textbf{Financial Analytics Platform} — Multi-tenant M\&A and personal finance dashboards \hfill \\
+\emph{Tech:} Python, Azure, Snowflake, React, fact/dimension modeling\\[-1.1em]
 \begin{itemize}
-  \item Built interactive dashboards with a Python backend connected to Snowflake, enabling real-time financial reporting and KPI visualization.
+  \item Designed distributed financial analytics platform with connectors to MYOB, NetSuite, and Xero accounting systems for M\&A due diligence, enabling automated calculation of normalized EBITDA, operating ratios, and revenue per headcount metrics.
+  \item Built personal finance management system with CSV connectors for multi-bank transaction data, AI-powered expense categorization with human-in-the-loop validation, and React frontend for budget optimization and financial goal tracking.
+  \item Implemented star schema data modeling with fact and dimension tables, deployed on Azure with scalable ETL pipelines for processing multiple concurrent deal analyses.
 \end{itemize}
+\end{samepage}
 
-\textbf{Automated Invoice Processing (AIP)} — OCR + LLM extraction \hfill \\
-\emph{Tech:} OCR, LLMs, PostgreSQL (vector)\\[-1.5em]
+\clearpage
+\begin{samepage}
+\textbf{Centralized Analytics Platform} — End-to-end data pipeline with automated reporting \hfill \\
+\emph{Tech:} Python, BigQuery, Prefect, Looker Studio, Slack API, functional programming\\[-1.1em]
 \begin{itemize}
-  \item Developed end-to-end invoice processing with OCR, document parsing, and LLM-based extraction; used a PostgreSQL vector database for semantic search.
+  \item Built comprehensive data platform integrating Tesorio, Salesforce, DataDog, and NetSuite with weekly automated data pulls using authenticated connectors and Prefect orchestration.
+  \item Designed multi-stage data pipeline architecture following monadic design patterns to maximize parallelism and predictability: raw data ingestion to BigQuery, transformation to intermediate forms, and final data marts for analytics consumption.
+  \item Automated financial reporting with Google Sheets integration and KPI distribution via Slack; enabled self-serve analytics through Looker Studio dashboards.
 \end{itemize}
+\end{samepage}
 
-\textbf{Algorithmic Market Maker} — Low-latency trading system \hfill \\
-\emph{Tech:} Python, AsyncIO, WebSockets\\[-1.5em]
+\begin{samepage}
+\textbf{Automated Invoice Processing (AIP)} — Event-driven document processing system \hfill \\
+\emph{Tech:} Google Cloud Functions, Pub/Sub, Docling, LLMs\\[-1.1em]
 \begin{itemize}
-  \item Built a high-frequency trading system consuming real-time market data over WebSockets with an asynchronous, low-latency architecture.
+  \item Developed event-driven invoice processing system with Gmail integration using Google Pub/Sub for real-time document notifications and Cloud Functions pipeline deployment based on cost/performance analysis.
+  \item Implemented hybrid extraction approach: deterministic keyword-based parsing for structured data, Docling for document AI processing with table structure preservation, and LLM processing for unstructured fields, with human validation before accounts payable integration.
+  \item Eliminated invoice processing errors and service disruptions by automating previously manual workflows and establishing consistent tracking protocols.
 \end{itemize}
+\end{samepage}
+
+\begin{samepage}
+\textbf{Quantitative Trading Strategy} — Mean-reversion algorithmic trading system \hfill \\
+\emph{Tech:} Python, statistical modeling, WebSockets\\[-1.1em]
+\begin{itemize}
+  \item Developed proprietary trading algorithm exploiting temporary divergences in negatively correlated asset pairs used for hedging, generating positive alpha in quantitative finance competition.
+  \item Implemented real-time market data processing with WebSocket connections and statistical mean-reversion models for identifying arbitrage opportunities in correlation breakdowns.
+\end{itemize}
+\end{samepage}
 
 \section*{Awards \& Honors}
 
@@ -107,24 +130,30 @@ Achieved high distinction in national physics competition, demonstrating advance
 \textbf{Australian Mathematics Competition} \hfill 2016--2018\\
 Multiple awards including Distinction, High Distinction, and Prize.
 
+\clearpage
 \section*{Experience}
 
-\textbf{Senior AI Analyst (Finance)} — Ignite Tech \hfill Jun 25--Ongoing\\[-1.5em]
+\begin{samepage}
+\textbf{Senior AI Analyst (Finance)} — Ignite Tech \hfill Jun 25--Ongoing\\[-1.1em]
 \begin{itemize}
   \item Implemented scalable workflows in Zapier, n8n, and Python across operations, reducing costs and improving EBITDA margin by 20\%.
   \item Managed revenue operations and post-acquisition integration, setting up BigQuery \& Dataform reporting that reduced revenue slippage by 85\%.
   \item Championed AI tool adoption across teams, saving 2+ hours per person weekly.
   \item Reported to the CFO on efficiency, ROI, and AI initiative adoption; owned traditional financial reporting.
 \end{itemize}
+\end{samepage}
 
-\textbf{Founder \& Data Science Consultant} — ZhangData \hfill Oct 2024--Present\\[-1.5em]
+\begin{samepage}
+\textbf{Founder \& Data Science Consultant} — ZhangData \hfill Oct 2024--Present\\[-1.1em]
 \begin{itemize}
   \item Founded independent consulting practice specializing in AI and data science solutions for SMEs and startups.
   \item Delivered end-to-end data analytics projects including predictive modeling, business intelligence, and automation.
   \item Applied top models such as XGBoost and Prophet in production environments for SMEs with significant ROI.
 \end{itemize}
+\end{samepage}
 
-\textbf{Senior Consultant (Deals)} — PricewaterhouseCoopers \hfill Nov 21--Jun 25\\[-1.5em]
+\begin{samepage}
+\textbf{Senior Consultant (Deals)} — PricewaterhouseCoopers \hfill Nov 21--Jun 25\\[-1.1em]
 \begin{itemize}
   \item Built FastAPI backends for financial data processing with validation, improving retrieval speed by 40\% and achieving 99.9\% data accuracy.
   \item Engineered scalable, parallelized data pipelines applicable to customer data integration workflows.
@@ -132,35 +161,40 @@ Multiple awards including Distinction, High Distinction, and Prize.
   \item Enhanced due diligence with AI document processing and natural language data query.
   \item Translated complex business requirements into technical solutions for cross-functional stakeholders with consistently strong client feedback.
 \end{itemize}
+\end{samepage}
 
-\textbf{Digital Marketing and SEO Analyst} — Knog, Melbourne \hfill Dec 2020--Apr 2022\\[-1.5em]
+\begin{samepage}
+\textbf{Digital Marketing and SEO Analyst} — Knog, Melbourne \hfill Dec 2020--Apr 2022\\[-1.1em]
 \begin{itemize}
   \item Conducted keyword analysis and web traffic data mining to optimize search engine rankings for cycling brand.
-  \item Assised in building "Find nearest retailer" feature and A/B tested its effectiveness.
+  \item Assisted in building "Find nearest retailer" feature and A/B tested its effectiveness.
   \item Researched and wrote content based on keyword research to maintain brand presence.
 \end{itemize}
+\end{samepage}
 
-\textbf{Supply Chain Data Analyst} — 3Fold Resources \hfill Aug 20--Nov 21\\[-1.5em]
+\begin{samepage}
+\textbf{Supply Chain Data Analyst} — 3Fold Resources \hfill Aug 20--Nov 21\\[-1.1em]
 \begin{itemize}
   \item Designed Python-based pipelines to automate procurement workflows, reducing manual work by 3+ hours weekly.
   \item Built analytics to optimize supplier selection, cutting costs by 75\% for key components.
 \end{itemize}
+\end{samepage}
 
-\textbf{Sales Trainer \& Data Support} — Hybridd Marketing, Melbourne \hfill Mar 2020--Jun 2021\\[-1.5em]
+\textbf{Sales Trainer \& Data Support} — Hybridd Marketing, Melbourne \hfill Mar 2020--Jun 2021\\[-1.1em]
 \begin{itemize}
   \item Conducted sales training sessions while tracking performance metrics and conversion rates across team members.
   \item Analyzed sales data to identify patterns and provide insights on effective training approaches and client targeting.
   \item Supported CRM data management and created basic reports to track training program effectiveness.
 \end{itemize}
 
-\textbf{Sales Representative} — RL Education, Melbourne \hfill Dec 2019--Jun 2020\\[-1.5em]
+\textbf{Sales Representative} — RL Education, Melbourne \hfill Dec 2019--Jun 2020\\[-1.1em]
 \begin{itemize}
   \item Conducted sales calls and client meetings for educational programs while maintaining detailed activity logs.
   \item Tracked conversion metrics and lead sources to understand customer acquisition patterns.
   \item Supported data entry and basic analysis of sales pipeline performance for team reporting.
 \end{itemize}
 
-\textbf{Community Programs Volunteer} — Shizuishan Community Centre, China \hfill Dec 2017--Feb 2018, Dec 2018--Feb 2019\\[-1.5em]
+\textbf{Community Programs Volunteer} — Shizuishan Community Centre, China \hfill Dec 2017--Feb 2018, Dec 2018--Feb 2019\\[-1.1em]
 \begin{itemize}
   \item Supported community outreach programs and assisted with social media content creation in Mandarin.
   \item Helped track participation rates and attendance at community events using basic spreadsheet analysis.
@@ -201,28 +235,29 @@ Completed core subjects: Financial Analysis, Business Law, and Financial Modelli
 
 \section*{Leadership \& Service}
 
-\textbf{Deals AI Champion} — PricewaterhouseCoopers \hfill 2023--2025\\[-1.5em]
+\textbf{Deals AI Champion} — PricewaterhouseCoopers \hfill 2023--2025\\[-1.1em]
 \begin{itemize}
   \item Led AI adoption initiatives across the Deals practice, driving innovation in due diligence and financial analysis processes.
   \item Developed training programs and best practices for AI tool integration in M\&A workflows.
   \item Collaborated with technology teams to implement scalable AI solutions for deal teams.
 \end{itemize}
 
-\textbf{Graduate Representative} — PricewaterhouseCoopers \hfill 2022--2023\\[-1.5em]
+\clearpage
+\textbf{Graduate Representative} — PricewaterhouseCoopers \hfill 2022--2023\\[-1.1em]
 \begin{itemize}
   \item Represented graduate cohort interests to senior management and HR teams.
   \item Facilitated communication between new graduates and leadership on workplace policies and professional development.
   \item Organized graduate networking events and mentorship programs.
 \end{itemize}
 
-\textbf{Director} — Melbourne University Dancesport Society \hfill 2021--2022\\[-1.5em]
+\textbf{Director} — Melbourne University Dancesport Society \hfill 2021--2022\\[-1.1em]
 \begin{itemize}
   \item Directed strategic planning and operational management for competitive dancesport society with 150+ members.
   \item Coordinated national competition participation and training programs for ballroom and Latin dance disciplines.
   \item Managed budget allocation, event logistics, and partnerships with external dance organizations.
 \end{itemize}
 
-\textbf{Sponsorship Officer} — Actuarial Students' Society, University of Melbourne \hfill Mar 2020--Dec 2020\\[-1.5em]
+\textbf{Sponsorship Officer} — Actuarial Students' Society, University of Melbourne \hfill Mar 2020--Dec 2020\\[-1.1em]
 \begin{itemize}
   \item Proactively reached out to potential corporate sponsors and built relationships with industry professionals for society events.
   \item Organized sponsor networking events and coordinated logistics for career fairs and professional development sessions.
@@ -231,21 +266,21 @@ Completed core subjects: Financial Analysis, Business Law, and Financial Modelli
 
 \section*{Community Service}
 
-\textbf{Public Health Research Volunteer} — Uganda Malaria Consortium \hfill 2024\\[-1.5em]
+\textbf{Public Health Research Volunteer} — Uganda Malaria Consortium \hfill 2024\\[-1.1em]
 \begin{itemize}
   \item Participated in malaria surveillance and prevention research initiatives in rural communities.
   \item Contributed to epidemiological data collection and field research for disease monitoring programs.
   \item Engaged in community health education and awareness programs promoting malaria prevention practices.
 \end{itemize}
 
-\textbf{Language Exchange Volunteer} — AMES Australia \hfill 2017--2019\\[-1.5em]
+\textbf{Language Exchange Volunteer} — AMES Australia \hfill 2017--2019\\[-1.1em]
 \begin{itemize}
   \item Provided conversational English support for new immigrants and refugees in community integration programs.
   \item Facilitated cultural and language learning in group and one-on-one settings for students from teenagers to retirees.
   \item Supported multicultural community events and integration activities such as group outings and cultural exchange events.
 \end{itemize}
 
-\textbf{Digital Literacy Volunteer} — Brighton Library \hfill 2016--2018\\[-1.5em]
+\textbf{Digital Literacy Volunteer} — Brighton Library \hfill 2016--2018\\[-1.1em]
 \begin{itemize}
   \item Provided technical support and digital literacy training for elderly community members.
   \item Taught basic computer skills, internet navigation, and digital communication tools.
@@ -254,14 +289,15 @@ Completed core subjects: Financial Analysis, Business Law, and Financial Modelli
 
 \section*{Mentorship}
 
-\textbf{ML/AI Development Mentor} — Romitan City Government, Uzbekistan \hfill 2025\\[-1.5em]
+\textbf{ML/AI Development Mentor} — Romitan City Government, Uzbekistan \hfill 2025\\[-1.1em]
 \begin{itemize}
   \item Mentored ML/AI developers in application architecture and best practices for government infrastructure constraints.
   \item Enhanced team capabilities in machine learning implementation and scalable system design.
   \item Facilitated knowledge transfer sessions on modern development workflows and deployment strategies.
 \end{itemize}
 
-\textbf{Peer Mentor} — Actuarial Students' Society, University of Melbourne \hfill Feb 2021--Dec 2021\\[-1.5em]
+\clearpage
+\textbf{Peer Mentor} — Actuarial Students' Society, University of Melbourne \hfill Feb 2021--Dec 2021\\[-1.1em]
 \begin{itemize}
   \item Provided academic and career guidance to junior actuarial science students, supporting their transition to university-level mathematics and statistics.
   \item Facilitated study groups and exam preparation sessions for core actuarial subjects including probability, statistics, and financial mathematics.
