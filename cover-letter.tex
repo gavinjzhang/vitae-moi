@@ -1,0 +1,150 @@
+% Cover Letter Template
+%
+% Usage:
+% - Fill in the "Sender" and "Recipient" fields below.
+% - Update the subject and body paragraphs.
+% - Run `make cover-letter.pdf` or simply `make` to build all.
+
+\documentclass[11pt]{letter}
+
+% --- Packages ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+% --- Page geometry & style ---
+% Keep margins reasonable for professional letters
+\geometry{
+  letterpaper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in
+}
+\pagestyle{empty}
+\setlength{\parskip}{0.75em}
+\setlength{\parindent}{0pt}
+
+% --- Link styling ---
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue,
+  pdfauthor={Jiayu Zhang},
+  pdftitle={Cover Letter}
+}
+
+% --- Sender information (edit these) ---
+% Fallbacks to prevent undefined-control-sequence errors if omitted
+\providecommand{\SenderAddress}{}
+\providecommand{\SenderCityStateZip}{}
+\providecommand{\SenderName}{Your Name}
+\providecommand{\SenderRole}{}
+\providecommand{\SenderPhone}{}
+\providecommand{\SenderEmail}{}
+\providecommand{\SenderWebsite}{}
+
+% Your values
+\renewcommand{\SenderName}{Jiayu Zhang}
+\renewcommand{\SenderRole}{AI Engineer}
+\renewcommand{\SenderPhone}{+61 416 542 375}
+\renewcommand{\SenderEmail}{jiayu@zhangdata.com}
+\renewcommand{\SenderWebsite}{https://zhangdata.com}
+
+% --- Recipient information (edit per application) ---
+\newcommand{\RecipientName}{Hiring Manager}
+% Optional: add a title like "Director of Engineering"; leave empty if not used
+\newcommand{\RecipientTitle}{}
+\newcommand{\CompanyName}{Company Name}
+\newcommand{\CompanyAddress}{456 Market Street\\City, ST 67890}
+
+% --- Letter meta ---
+\newcommand{\LetterSubject}{Application for Position Title}
+% The class normally prints the date; we'll render it manually in the body
+\date{}
+
+% --- Compact inline header (full-width) ---
+% Renders name as a prominent header with an inline contact row beneath.
+% This replaces the default letter-class return address block.
+\newcommand{\MakeLetterHeader}{%
+  {\Large\bfseries\scshape \SenderName}\par
+  \vspace{0.4em}\hrule\vspace{0.1em}
+  {\small \href{mailto:\SenderEmail}{\nolinkurl{\SenderEmail}} ~|~ \SenderPhone ~|~ \url{\SenderWebsite}}\par
+  \vspace{0.9em}
+}
+
+% --- Body template ---
+\begin{document}
+
+% Destination address on the letter
+% Begin letter; we pass an empty destination so we can fully control
+% the header area and recipient block layout ourselves.
+\begin{letter}{}
+
+% Inline header at top of first page
+\MakeLetterHeader
+
+% Render date + recipient block manually under header
+{\small \today}\\[0.75em]
+{\RecipientName}\\
+{\CompanyName}\\
+{\CompanyAddress}
+
+\vspace{1em}
+
+% Optional subject line and salutation with local spacing control
+{%
+  \setlength{\parskip}{0pt}% avoid extra space between these two lines
+  \textbf{Re: \LetterSubject}\par
+  \opening{Dear \RecipientName,}
+}
+
+% Intro paragraph — state the role, where you found it, and your fit.
+% Role + source + quick fit summary
+I am writing to express my interest in the \textit{Senior Data Scientist} role at
+\CompanyName{} (Job ID: 12345), which I found via LinkedIn. With 7+ years in applied
+ML and analytics, leading initiatives from discovery to deployment, I believe I would
+contribute meaningfully to your team.
+
+% Middle paragraph(s) — highlight 2--3 achievements relevant to the role.
+% Highlights (2--4 bullets)
+Key highlights aligned to the role:
+\begin{itemize}
+  \item Led an experimentation platform migration that reduced time-to-insight by 35\%.
+  \item Shipped an LTV model improving bid efficiency 18\% across paid channels.
+  \item Built ML ops tooling (CI/CD + monitoring) that cut model drift incidents by 50\%.
+  \item Partnered cross-functionally (Product, Eng, GTM) to prioritize impact-driven work.
+\end{itemize}
+
+% Optional paragraph — why this company/team/mission.
+% Why this company/team
+I’m excited by your recent focus on privacy-preserving personalization and the roadmap
+callouts around on-device inference. The blend of measurable impact and responsible ML
+mirrors how I’ve approached prior launches.
+
+% Closing — call to action and availability.
+% Closing — call to action and availability
+Thank you for your time and consideration. I would welcome the opportunity to discuss
+how my background aligns with the needs of \CompanyName{} and the \textit{Senior Data Scientist}
+role. I am available at your convenience and can be reached at \SenderPhone{} or
+\href{mailto:\SenderEmail}{\nolinkurl{\SenderEmail}}.
+
+% Complimentary close and signature
+\closing{Sincerely,}
+
+% If you prefer a handwritten signature image, place it under assets/ and uncomment:
+% \signature{\includegraphics[height=2\baselineskip]{assets/signature.png}\\\SenderName}
+\signature{\SenderName}
+
+% P.S. (optional)
+\vspace{0.25em}
+\textit{P.S. I’m happy to share a short write-up on the LTV system referenced above.}
+
+% Optional enclosures
+\encl{Resume, Portfolio (optional)}
+
+\end{letter}
+\end{document}

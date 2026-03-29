@@ -31,3 +31,57 @@ Notes: Uses `latexmk` when available; otherwise falls back to `pdflatex` with tw
 ## Agent-Specific Instructions
 - Edit only source files (`*.tex`, `Makefile`). Never hand-edit generated artifacts.
 - Prefer minimal dependencies; do not introduce non-TeX build steps. Follow the Make targets above.
+
+## Tailoring Workflow (AI Assistants)
+The user will paste job descriptions and ask you to tailor both the resume and the cover letter for a specific role and company, then produce compiled PDFs with a descriptive suffix.
+
+What to do
+- Parse the pasted job description and extract:
+  - `Company` (canonical short form, e.g., `Acme` not `Acme, Inc.`)
+  - `Role` (e.g., `Senior Data Scientist`)
+  - Key responsibilities, qualifications, and keywords to reflect in the content
+
+- Update sources before compiling:
+  - `resume.tex`: adjust bullet points and highlights to match the job’s requirements; keep truthful content, emphasize relevant impact, and trim irrelevant details.
+  - `cover-letter.tex`:
+    - Set `\CompanyName{...}` and other recipient fields if provided.
+    - Update `\LetterSubject` to `Application for <Role>`.
+    - Rewrite the intro line and highlights to mirror the role and top requirements.
+    - Keep spacing and macro safety (escape `& % # $ _ { } ~ ^ \`).
+
+- Filename suffix convention when compiling tailored versions:
+  - `-[Company]-[RoleShort]-[Date]`
+  - `Date`: `YYYY-MM-DD`
+  - `RoleShort`: abbreviated form, e.g.:
+    - Senior → `Sr`, Staff → `Stf`, Principal → `Prin`
+    - Machine Learning → `ML`, Data Scientist → `DS`, Engineer → `Eng`, Manager → `Mgr`
+    - Example: `Senior Data Scientist` → `Sr-DS`
+
+How to produce the tailored PDFs
+- Preferred: use the Makefile helper which also saves the .tex copies into a company-specific folder and compiles there.
+  ```sh
+  make tailor COMPANY="Acme" ROLE_SHORT="Sr-DS"
+  # Results:
+  #   ./Acme/resume-Acme-Sr-DS-YYYY-MM-DD.tex + .pdf
+  #   ./Acme/cover-letter-Acme-Sr-DS-YYYY-MM-DD.tex + .pdf
+  # You can edit the copies in ./Acme/ and re-run the same command to rebuild.
+  ```
+  - Safety: the helper will NOT overwrite existing .tex copies in ./[Company]/ by default.
+    - To force overwriting the saved copies, set `FORCE_COPY=1`:
+      `make tailor COMPANY="Acme" ROLE_SHORT="Sr-DS" FORCE_COPY=1`
+
+- Manual (if you’re not using the helper):
+  ```sh
+  DATE=$(date +%Y-%m-%d)
+  COMPANY="Acme"; ROLE_SHORT="Sr-DS"
+  mkdir -p "$COMPANY"
+  cp resume.tex "$COMPANY/resume-${COMPANY}-${ROLE_SHORT}-${DATE}.tex"
+  cp cover-letter.tex "$COMPANY/cover-letter-${COMPANY}-${ROLE_SHORT}-${DATE}.tex"
+  latexmk -pdf "$COMPANY/resume-${COMPANY}-${ROLE_SHORT}-${DATE}.tex"
+  latexmk -pdf "$COMPANY/cover-letter-${COMPANY}-${ROLE_SHORT}-${DATE}.tex"
+  ```
+
+Notes
+- The Makefile already builds any `*.tex` into a matching `*.pdf`.
+- Do not introduce external build tools; stick to `make`/LaTeX.
+- It is acceptable to commit the generated PDFs for review, but regenerate via `make` before merging.
