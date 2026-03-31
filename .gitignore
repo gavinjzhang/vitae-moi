@@ -30,5 +30,6 @@
 *.thm
 texput.log
 
-# Keep PDFs tracked if desired (not ignored)
-# *.pdf
+# PDFs and tailored cover letters (not tracked)
+*.pdf
+cover_*.tex
